@@ -13,7 +13,7 @@ jobs:
             uses: actions/checkout@v2
 
           - name: Set up Python
-            uses: actions/setup-python@v6
+            uses: actions/setup-python@v4
             with:
               python-version: '3.14.0'
 
@@ -23,4 +23,5 @@ jobs:
 
           - name: get data from API
             run: |
-              python read_data_api.py
+                 cd .github/workflows
+                 python read_data_api.py
