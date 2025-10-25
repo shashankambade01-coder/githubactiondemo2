@@ -22,6 +22,8 @@ jobs:
               
 
           - name: get data from API
+            env:
+              API_TOKEN: ${{ secrets.API_TOKEN }}
             run: |
                  cd .github/workflows
                  python read_data_api.py
